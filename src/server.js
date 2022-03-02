@@ -2,9 +2,10 @@ const express = require("express");
 const moment = require("moment");
 const stringify = require("json-stringify-safe");
 const server = express();
-const port = 3000;
+const bodyParser = require("body-parser");
 
-server.get("/", (req, res) => {
+server.use(bodyParser.json());
+server.get("/", async (req, res) => {
   //console.log(req);
   let now = new Date();
   var dateStringWithTime = moment(now).format("YYYY-MM-DD HH:mm:ss");
@@ -12,6 +13,7 @@ server.get("/", (req, res) => {
   console.log(req);
   res.send(stringify(req));
 });
+
 server.post("/", (req, res) => {
   //console.log(req);
   let now = new Date();
@@ -20,6 +22,7 @@ server.post("/", (req, res) => {
   console.log(req);
   res.send(stringify(req));
 });
+
 server.put("/", (req, res) => {
   //console.log(req);
   let now = new Date();
@@ -28,6 +31,7 @@ server.put("/", (req, res) => {
   console.log(req);
   res.send(stringify(req));
 });
+
 server.delete("/", (req, res) => {
   //console.log(req);
   let now = new Date();
