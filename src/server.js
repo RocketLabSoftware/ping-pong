@@ -73,6 +73,6 @@ server.connect("/", (req, res) => {
   res.send(stringify(req));
 });
 
-server.listen(port, () => {
-  console.log(`Example server listening on port ${port}`);
-});
+console.log("Rocket Launched");
+console.log("Server running on port ", process.env.PORT || 3333);
+server.listen(process.env.PORT || 3333);
