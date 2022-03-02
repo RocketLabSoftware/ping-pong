@@ -1,0 +1,25 @@
+{
+  "name": "ping-pong",
+  "version": "1.0.0",
+  "description": "App test if a service is alive(pinging)",
+  "main": "src/server.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "test",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "Thomas Eusebio Vieira",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.2",
+    "json-stringify-safe": "^5.0.1",
+    "moment": "^2.29.1"
+  }
+}
